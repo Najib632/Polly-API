@@ -77,11 +77,11 @@ def test_get_polls_empty():
 def test_create_poll():
     headers = {"Authorization": f"Bearer {token}"}
     response = client.post(
-        "/polls", 
+        "/polls",
         json={
             "question": "Is this a test poll?",
             "options": ["Yes", "No"]
-        }, 
+        },
         headers=headers
     )
     assert response.status_code == 200
